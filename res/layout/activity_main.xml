@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ShowMuList"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/list_background"
+    android:orientation="vertical" >
+	
+    <ListView
+        android:id="@+id/music_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp" >
+    </ListView>
+    
+    <RelativeLayout
+        android:id="@+id/singSong_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+        
+        <ImageView 
+            android:id="@+id/music_album"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_launcher" />
+        
+        <RelativeLayout
+            android:id="@+id/music_info_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/music_album" 
+            android:layout_alignTop="@id/music_album" >
+            
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="5.0dp"
+                android:layout_marginLeft="5.0dp"
+                android:text="@string/singer" />
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text1"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="8.0dp"
+                android:layout_marginLeft="5.0dp"
+                android:text="@string/time" />
+            
+            <RelativeLayout 
+                android:id="@+id/change_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true" >
+                
+                <Button
+	                android:id="@+id/next_music"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentRight="true"
+	                android:layout_marginTop="10dp"
+	                android:layout_marginLeft="5dp"
+	                android:background="@drawable/next_music" />
+                <Button
+                    android:id="@+id/play_music"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/play"
+	                android:layout_toLeftOf="@id/next_music"
+	                android:layout_marginTop="8.0dp"
+	                android:layout_marginRight="5.0dp" />
+                
+            </RelativeLayout>
+            
+      	</RelativeLayout>
+      
+    </RelativeLayout>
+        
+
+
+</RelativeLayout>
